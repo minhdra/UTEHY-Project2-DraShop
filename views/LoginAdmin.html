@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <!-- Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../Fontawesome-5.15.3/css/all.min.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/AdminStyle.css">
+    <!-- JQuery -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body id="login">
+    <div class="main-login">
+        <div class="content-login">
+            <div class="img-profile">
+                <img src="../images/admin/profile_pic.svg" alt="">
+            </div>
+            <div>
+                <div class="input-wrapper">
+                    <input type="text" class="inp" id="username" placeholder="Tên tài khoản">
+                    <div class="pass-wrapper">
+                        <input type="password" class="inp" id="password" placeholder="Mật khẩu">
+                        <a href="#">Quên mật khẩu?</a>
+                    </div>
+                </div>
+    
+                <button class="submit-login">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------- -->
+    <div class="alert-login alert-success">
+        <button type="button" class="close btn-close" data-dismiss="alert" style="margin-left: 1rem">&times;</button>
+        Đăng nhập thành công!
+    </div>
+    <div class="alert-login alert-danger">
+        <button type="button" class="close btn-close" data-dismiss="alert" style="margin-left: 1rem">&times;</button>
+        Tài khoản hoặc mật khẩu sai!
+    </div>
+    <script src="../js/MainAdmin.js"></script>
+</body>
+</html>

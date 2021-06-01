@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - DraShop</title>
+    <!-- Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../Fontawesome-5.15.3/css/all.min.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/AdminStyle.css">
+    <!-- JQuery -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body id="indexAdmin">
+    <header>
+        <nav>
+            <div class="ds-logo-wrapper">
+                <a href="./index.html" style="display: inherit;"><img src="../images/DS-Logo-2.jpg" alt="" /></a>
+                <i class="fal fa-bars" style="padding: 0 1rem; margin-left: 1rem;"></i>
+            </div>
+            <div class="nav-right">
+                <div class="user-wrapper">
+                    <div class="name-user">Le Minh   <i class="fas fa-caret-right"></i></div>
+                    <div class="user-dropdown">
+                        <div>Thông tin</div>
+                        <div>Đăng xuất</div>
+                    </div>
+                </div>
+                <div class="avatar-wrapper">
+                    <img src="../images/admin/profile_pic.svg" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="content">
+            <div class="content-left col-exm-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="content-item-wrapper">
+                    <div class="content-item home">
+                        Trang chủ 
+                    </div>
+                    
+                </div>
+                <div class="content-item-wrapper">
+                    <div class="content-item">
+                        Danh mục quản lý
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <div class="content-item-dropdown">
+                        <div class="dropdown-item manageProduct">Quản lý sản phẩm</div>
+                        <div class="dropdown-item manageSpecies">Quản lý loại sản phẩm</div>
+                        <div class="dropdown-item manageSupplier">Quản lý nhà cung cấp</div>
+                        <div class="dropdown-item manageNews">Quản lý tin tức</div>
+                    </div>
+                </div>
+                <div class="content-item-wrapper">
+                    <div class="content-item">
+                        Danh mục giao diện 
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <div class="content-item-dropdown">
+                        <div class="dropdown-item">Slideshow</div>
+                        <div class="dropdown-item">Giao diện</div>
+                    </div>
+                </div>
+                <div class="content-item-wrapper">
+                    <div class="content-item">
+                        Danh mục khách hàng
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <div class="content-item-dropdown">
+                        <div class="dropdown-item">Quản lý khách hàng</div>
+                        <div class="dropdown-item">Tài khoản khách hàng</div>
+                    </div>
+                </div>
+                <div class="content-item-wrapper">
+                    <div class="content-item">
+                        Danh mục hóa đơn
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <div class="content-item-dropdown">
+                        <div class="dropdown-item">Quản lý hóa đơn nhập</div>
+                        <div class="dropdown-item">Quản lý hóa đơn xuất</div>
+                        <div class="dropdown-item">Thống kê</div>
+                    </div>
+                </div>
+                <div class="content-item-wrapper">
+                    <div class="content-item">
+                        Danh mục quản trị
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                    <div class="content-item-dropdown">
+                        <div class="dropdown-item">Quản lý tài khoản</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right col-exm-12 col-sm-12 col-md-9 col-lg-9">
+                <div id="home" class="right-content-item active">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageProduct">
+                                Quản lý sản phẩm
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageSpecies">
+                                Quản lý loại sản phẩm
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageSupplier">
+                                Quản lý nhà cung cấp
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageCustomer">
+                                Quản lý khách hàng
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageOrder">
+                                Quản lý hóa đơn xuất
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageImportBill">
+                                Quản lý hóa đơn nhập
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title managerInterface">
+                                Quản lý giao diện
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
+                        <div class="box">
+                            <div class="title manageAccount">
+                                Quản lý tài khoản
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="manageProduct" class="right-content-item">
+                     <div class="manage-navbar">
+                         <div class="manage-navbar-left">
+                             <input type="text" class="form-control filter-table" placeholder="Tìm kiếm gì đó...">
+                             <select class="custom-select" name="" id="">
+                                 <option selected>Số lượng hiển thị</option>
+                                 <option value="5">5</option>
+                                 <option value="10">10</option>
+                                 <option value="15">15</option>
+                             </select>
+                             <select class="custom-select" name="" id="">
+                                 <option selected>Sắp xếp theo...</option>
+                                 <option value="A">A-Z</option>
+                                 <option value="Z">Z-A</option>
+                             </select>
+                         </div>
+                        <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="product">Thêm mới</button>
+                     </div>
+                     <div class="manageContent">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Hãng</th>
+                                    <th>Loại</th>
+                                    <th>Giới tính</th>
+                                    <th>Màu</th>
+                                    <th>Giá</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="numberOrder">1</td>
+                                    <td>SP043945</td>
+                                    <td>ÁO HOODIE 3 SỌC WORDING</td>
+                                    <td>Adidas</td>
+                                    <td>Áo</td>
+                                    <td>Nữ</td>
+                                    <td>Black</td>
+                                    <td>3.500.000 VND</td>
+                                    <td>
+                                        <picture>
+                                            <img src="../images/adidas/Ao_hoodie_3_Soc_Wording_Full-Zip_DJen.jpg" alt="">
+                                        </picture>
+                                    </td>
+                                    <td>
+                                        <div class="wrap-edit-button">
+                                            <button class="btn btn-light btn-edit-product" data-manageName="product"><i class="fal fa-edit"></i></button>
+                                            <button class="btn btn-light btn-remove-product" data-manageName="product"><i class="fal fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>    
+                            </tbody>
+                        </table>
+                     </div>
+                </div>
+                <div id="manageSpecies" class="right-content-item">
+                    <div class="manage-navbar">
+                        <div class="manage-navbar-left">
+                            <input type="text" class="form-control filter-table" placeholder="Tìm kiếm gì đó...">
+                            <select class="custom-select" name="" id="">
+                                <option selected>Số lượng hiển thị</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                            <select class="custom-select" name="" id="">
+                                <option selected>Sắp xếp theo...</option>
+                                <option value="A">A-Z</option>
+                                <option value="Z">Z-A</option>
+                            </select>
+                        </div>
+                       <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="species">Thêm mới</button>
+                    </div>
+                    <div class="manageContent">
+                       <table class="table">
+                           <thead>
+                               <tr>
+                                   <th>STT</th>
+                                   <th>Mã loại</th>
+                                   <th>Tên loại</th>
+                                   <th>Tác vụ</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td class="numberOrder">1</td>
+                                   <td>LSP04945</td>
+                                   <td>Áo</td>
+                                   <td>
+                                       <div class="wrap-edit-button">
+                                           <button class="btn btn-light btn-edit-species" data-manageName="species"><i class="fal fa-edit"></i></button>
+                                           <button class="btn btn-light btn-remove-species" data-manageName="species"><i class="fal fa-trash"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>    
+                               <tr>
+                                   <td class="numberOrder">2</td>
+                                   <td>LSP84573</td>
+                                   <td>Quần</td>
+                                   <td>
+                                       <div class="wrap-edit-button">
+                                           <button class="btn btn-light btn-edit-species" data-manageName="species"><i class="fal fa-edit"></i></button>
+                                           <button class="btn btn-light btn-remove-species" data-manageName="species"><i class="fal fa-trash"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>    
+                           </tbody>
+                       </table>
+                    </div>
+                </div>
+                <div id="manageSupplier" class="right-content-item">
+                    <div class="manage-navbar">
+                        <div class="manage-navbar-left">
+                            <input type="text" class="form-control filter-table" placeholder="Tìm kiếm gì đó...">
+                            <select class="custom-select" name="" id="">
+                                <option selected>Số lượng hiển thị</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                            <select class="custom-select" name="" id="">
+                                <option selected>Sắp xếp theo...</option>
+                                <option value="A">A-Z</option>
+                                <option value="Z">Z-A</option>
+                            </select>
+                        </div>
+                       <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="supplier">Thêm mới</button>
+                    </div>
+                    <div class="manageContent">
+                       <table class="table">
+                           <thead>
+                               <tr>
+                                   <th>STT</th>
+                                   <th>Mã nhà cung cấp</th>
+                                   <th>Tên nhà cung cấp</th>
+                                   <th>Địa chỉ</th>
+                                   <th>Tác vụ</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td class="numberOrder">1</td>
+                                   <td>NCC03445</td>
+                                   <td>Công Ty TNHH May Mặc Dony</td>
+                                   <td>142/4 Bàu Cát 2, P.12, Q. Tân Bình Tp. Hồ Chí Minh (TPHCM), Việt Nam</td>
+                                   <td>
+                                       <div class="wrap-edit-button">
+                                           <button class="btn btn-light btn-edit-supplier" data-manageName="supplier"><i class="fal fa-edit"></i></button>
+                                           <button class="btn btn-light btn-remove-supplier" data-manageName="supplier"><i class="fal fa-trash"></i></button>
+                                       </div>
+                                   </td>
+                               </tr> 
+                           </tbody>
+                       </table>
+                    </div>
+                </div>
+                <div id="manageNews" class="right-content-item">
+                    <div class="manage-navbar">
+                        <div class="manage-navbar-left">
+                            <input type="text" class="form-control filter-table" placeholder="Tìm kiếm gì đó...">
+                            <select class="custom-select" name="" id="">
+                                <option selected>Số lượng hiển thị</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                            <select class="custom-select" name="" id="">
+                                <option selected>Sắp xếp theo...</option>
+                                <option value="A">A-Z</option>
+                                <option value="Z">Z-A</option>
+                            </select>
+                        </div>
+                       <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="news">Thêm mới</button>
+                    </div>
+                    <div class="manageContent">
+                       <table class="table">
+                           <thead>
+                               <tr>
+                                   <th>STT</th>
+                                   <th>Mã tin tức</th>
+                                   <th>Mã người đăng</th>
+                                   <th>Ngày đăng</th>
+                                   <th>Tác vụ</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td class="numberOrder">1</td>
+                                   <td>TT603445</td>
+                                   <td>NV949382</td>
+                                   <td>26/04/2021</td>
+                                   <td>
+                                       <div class="wrap-edit-button">
+                                           <button class="btn btn-light btn-edit-news" data-manageName="news"><i class="fal fa-edit"></i></button>
+                                           <button class="btn btn-light btn-remove-news" data-manageName="news"><i class="fal fa-trash"></i></button>
+                                       </div>
+                                   </td>
+                               </tr> 
+                           </tbody>
+                       </table>
+                    </div>
+                </div>
+                <div class="add-edit-product add-edit" id="add-edit-product" style="padding: 0 1rem 1rem;">
+                    <div class="add-edit-wrapper">
+                        <div class="add-edit-content">
+                            <div class="add-edit-left col-lg-6">
+                                <h2>THÊM SẢN PHẨM</h2>
+                                <div class="input-wrapper">
+                                    <label for="">Mã sản phẩm: </label>
+                                    <input type="text" class="inp-id form-control" disabled>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="">Tên sản phẩm: </label>
+                                    <input type="text" class="inp-name form-control">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="">Giá: </label>
+                                    <input type="text" class="inp-price form-control" placeholder="Ví dụ: 4000000">
+                                </div>
+                                <div class="input-wrapper fileProduct">
+                                    <label for="fileProduct">Hình ảnh: </label>
+                                    <input type="file" class="form-control" id="fileProduct">
+                                </div>
+                            </div>
+                            <div class="add-edit-right col-lg-6">
+                                <div class="add-edit-img-product-wrapper">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="comboBox">
+                                    <div class="input-wrapper">
+                                        <select class="form-control" name="" id="color">
+                                            <option value="black">Black</option>
+                                            <option value="white">White</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="green">Green</option>
+                                            <option value="purple">Purple</option>
+                                            <option value="multicolor" selected>Multicolor</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrapper" style="justify-content: flex-start;">
+                                        <select class="form-control" name="" id="species" style="margin-right: 1rem">
+                                            <option value="áo" selected>Áo</option>
+                                            <option value="quần">Quần</option>
+                                        </select>
+                                        <select class="form-control" name="" id="gender">
+                                            <option value="men" selected>Nam</option>
+                                            <option value="women">Nữ</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <select class="form-control" name="" id="brand">
+                                            <option value="gucci" selected>Gucci</option>
+                                            <option value="louis vuitton">Louis Vuitton</option>
+                                            <option value="adidas">Adidas</option>
+                                            <option value="supreme">Supreme</option>
+                                            <option value="puma">Puma</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description" style="width: 100%">
+                                <span>Mô tả:</span>
+                                <textarea class="form-control" name="" id="textarea" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="btn-buy-wrapper" style="margin-top: 1rem">
+                                <button class="btn btn-light btn-border-dark btn-confirm" style="margin-right: 1rem">
+                                    Xác nhận
+                                </button>
+                                <button class="btn btn-light btn-border-dark btn-exit">
+                                    Hủy
+                                </button>
+                            </div>
+                            <span class="alert">Dữ liệu không hợp lệ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-edit-species add-edit" id="add-edit-species" style="padding: 0 1rem 1rem;">
+                    <div class="add-edit-wrapper">
+                        <div class="add-edit-content">
+                            <div class="add-edit-left col-lg-6">
+                                <h2>THÊM LOẠI SẢN PHẨM</h2>
+                                <div class="input-wrapper">
+                                    <label for="">Mã loại sản phẩm: </label>
+                                    <input type="text" class="inp-id form-control" disabled>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="">Tên loại sản phẩm: </label>
+                                    <input type="text" class="inp-name form-control">
+                                </div>
+                            </div>
+                            <div class="btn-buy-wrapper" style="margin-top: 1rem">
+                                <button class="btn btn-light btn-border-dark btn-confirm" style="margin-right: 1rem">
+                                    Xác nhận
+                                </button>
+                                <button class="btn btn-light btn-border-dark btn-exit">
+                                    Hủy
+                                </button>
+                                <span class="alert">Dữ liệu không hợp lệ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <script src="../js/MainAdmin.js"></script>
+</body>
+</html>

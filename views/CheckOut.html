@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chào mừng đến Dra-Shop</title>
+    <!-- Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../Fontawesome-5.15.3/css/all.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/responsive.css">
+    <!-- JQuery -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+  </head>
+  <body id="index">
+    <header>
+      <!-- <nav class="header-top">
+        <div class="ht-right">
+          <div class="ht-help">
+            <i class="fal fa-question-circle"></i>
+            Giúp đỡ
+          </div>
+          <div class="ht-numberPhone">
+            <i class="fal fa-mobile"></i>
+            +849234728323
+          </div>
+          <div class="dark-mode">
+            <i class="fad fa-sun darkMode active"></i>
+            <i class="fad fa-moon darkMode"></i>
+          </div>
+        </div>
+        <div class="ht-left">
+          <a class="ht-item" href="#" title="Store">
+            <i class="fal fa-map-marker-alt"></i>
+          </a>
+          <a class="ht-item" href="#" title="Wishlist">
+            <i class="fal fa-heart"></i>
+            <span class="ds-wishlist-with-count">0</span>
+          </a>
+          <a class="ht-item" href="#" title="Account">
+            <i class="fal fa-user"></i>
+          </a>
+          <div class="cart-home-wrapper">
+            <a class="ht-item wrap-cart" href="#" title="Carts" onclick="window.open('./Cart.html', '_parent')">
+              <i class="fal fa-shopping-bag"></i>
+              <span class="ds-bag-with-count">0</span>
+            </a>
+            <div class="cart-wrapper">
+              <h1 style="text-transform: uppercase; padding: 1rem;">Giỏ hàng của bạn</h1>
+              <div class="text-no-product">
+                Chưa có sản phẩm
+              </div>
+              <div class="tiny-cart-product-wrapper w-100">
+                
+              </div>
+              <a class="w-100 link-cart" href="./Cart.html">GIỎ HÀNG</a>
+            </div>
+          </div>
+        </div>
+      </nav> -->
+      <div class="header-bottom">
+        <div class="ds-logo-wrapper">
+          <img src="../images/DS-Logo-2.jpg" alt="" />
+        </div>
+        <div class="hb-menu">
+          <ul class="nav-menu">
+            <li class="nav-item nav-new">Mới</li>
+            <li class="nav-item nav-men">Nam</li>
+            <li class="nav-item nav-women">Nữ</li>
+            <li class="nav-item nav-about">Về chúng tôi</li>
+            <li class="nav-item nav-news">Tin tức</li>
+          </ul>
+        </div>
+        <div class="wrap-search">
+          <label class="lbl-search" for="">
+            <i class="far fa-search"></i>
+          </label>
+          <input
+            id="search"
+            class="inp inp-text"
+            type="text"
+            placeholder="Tìm kiếm sản phẩm..."
+          />
+          <span class="bar-search"></span>
+        </div>
+        <div class="search-suggest" style="height: auto; width: 100%">
+          <div class="group-suggest-left">
+            <div class="group-suggest">
+              <h3>NỮ</h3>
+              <ul class="suggest-list">
+                <li class="suggest-item">Váy, đầm</li>
+                <li class="suggest-item">Túi xách</li>
+                <li class="suggest-item">Trang sức</li>
+                <li class="suggest-item">Giày</li>
+              </ul>
+            </div>
+            <div class="group-suggest">
+              <h3>NAM</h3>
+              <ul class="suggest-list">
+                <li class="suggest-item">Quần, áo</li>
+                <li class="suggest-item">Đồng hồ</li>
+                <li class="suggest-item">Túi</li>
+                <li class="suggest-item">Giày</li>
+              </ul>
+            </div>
+          </div>
+          <div class="group-suggest-right">
+            <h3>SẢN PHẨM</h3>
+            <div class="product-list-suggest">
+              <div class="product-item-suggest" style="display: flex;">
+                <div class="wrap-img-suggest">
+                  <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+                </div>
+                <div class="name-product-suggest">
+                  Chân váy
+                </div>
+              </div>
+              <div class="product-item-suggest" style="display: flex;">
+                <div class="wrap-img-suggest">
+                  <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp" at="">
+  
+                </div>
+                <div class="name-product-suggest">
+                  Balo Trio
+                </div>
+              </div>
+              <div class="product-item-suggest" style="display: flex;">
+                <div class="wrap-img-suggest">
+                  <img src="../images/supreme/Áo_cans.png" alt="">
+                </div>
+                <div class="name-product-suggest">
+                  Áo Cans
+                </div>
+              </div>
+              <div class="product-item-suggest" style="display: flex;">
+                <div class="wrap-img-suggest">
+                  <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+                </div>
+                <div class="name-product-suggest">
+                  Quần bó Techfit
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="suggest-exit">
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+        <div id="nav-new" class="nav-suggest" style="height: auto; width: 100%;">
+          <div class="group-suggest-left">
+            <div class="group-suggest">
+              <ul class="suggest-list">
+                <li class="suggest-item">Cho Nữ</li>
+                <li class="suggest-item">Cho Nam</li>
+              </ul>
+            </div>
+          </div>
+          <div class="group-suggest-right">
+            <div class="group-suggest">
+              <ul class="suggest-list">
+                <li class="suggest-item">Bộ Sưu Tập 2021</li>
+                <li class="suggest-item">Bộ Sưu Tập Mùa Hè</li>
+                <li class="suggest-item">Bộ Sưu Tập Xuân-Hè</li>
+                <li class="suggest-item">Bộ Sưu Tập Adidas</li>
+              </ul>
+            </div>
+            <div class="product-list-suggest">
+              <div class="product-item-suggest active">
+                  <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp" at=""> 
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/supreme/Áo_cans.png" alt="">
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <button class="suggest-exit">
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+        <div id="nav-men" class="nav-suggest" style="height: auto; width: 100%;">
+          <div class="group-suggest-left">
+            <div class="group-suggest">
+              <ul class="suggest-list">
+                <li class="suggest-item">Cho Nữ</li>
+                <li class="suggest-item">Cho Nam</li>
+              </ul>
+            </div>
+          </div>
+          <div class="group-suggest-right">
+            <div class="group-suggest">
+              <ul class="suggest-list">
+                <li class="suggest-item">Bộ Sưu Tập 2021</li>
+                <li class="suggest-item">Bộ Sưu Tập Mùa Hè</li>
+                <li class="suggest-item">Bộ Sưu Tập Xuân-Hè</li>
+                <li class="suggest-item">Bộ Sưu Tập Adidas</li>
+              </ul>
+            </div>
+            <div class="product-list-suggest">
+              <div class="product-item-suggest active">
+                  <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp" at=""> 
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/supreme/Áo_cans.png" alt="">
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <button class="suggest-exit">
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+        <div id="nav-women" class="nav-suggest" style="height: auto; width: 100%;">
+          <div class="group-suggest-left">
+            <div class="group-suggest">
+              <ul class="suggest-list">
+                <li class="suggest-item">Cho Nữ</li>
+                <li class="suggest-item">Cho Nam</li>
+              </ul>
+            </div>
+          </div>
+          <div class="group-suggest-right">
+            <div class="group-suggest">
+              <ul class="suggest-list">
+                <li class="suggest-item">Bộ Sưu Tập 2021</li>
+                <li class="suggest-item">Bộ Sưu Tập Mùa Hè</li>
+                <li class="suggest-item">Bộ Sưu Tập Xuân-Hè</li>
+                <li class="suggest-item">Bộ Sưu Tập Adidas</li>
+              </ul>
+            </div>
+            <div class="product-list-suggest">
+              <div class="product-item-suggest active">
+                  <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp" at=""> 
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/supreme/Áo_cans.png" alt="">
+              </div>
+              <div class="product-item-suggest">
+                  <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <button class="suggest-exit">
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="hidden main">
+        <div class="checkOut" style="width: 70%; margin: auto">
+            <div class="nav-bar">
+                <div class="nav-bar-item active bill-detail active"><span>1</span> CHI TIẾT ĐƠN HÀNG</div>
+                <div class="nav-bar-item payment"><span>2</span> XEM LẠI & THANH TOÁN</div>
+            </div>
+            <div class="checkOut-content active">
+              <div id="bill-detail"  class="bill-detail-wrapper">
+                <div class="bill-detail-left col-lg-6">
+                    <h2>ĐỊA CHỈ GIAO HÀNG</h2>
+                    <form>
+                        <div class="input-fullName-wrapper">
+                            <div class="input-wrapper input-lastname-wrapper" style="padding-right: 1rem">
+                                <input class="form-control inp-frm1" type="text" id="LastName" required>
+                                <label class="lbl-frm1" for="LastName">
+                                    <span class="lbl-content">TÊN * </span>
+                                </label>
+                                <span>Vui lòng điền đầy đủ họ tên</span>
+                            </div>
+                            <div class="input-wrapper input-firstname-wrapper">
+                                <input class="form-control inp-frm1" type="text" id="FirstName" required>
+                                <label class="lbl-frm1" for="FirstName">
+                                    <span class="lbl-content">HỌ * </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-wrapper input-commune-wrapper">
+                            <input class="form-control inp-frm1" type="text" id="commune" required>
+                            <label class="lbl-frm1" for="commune">
+                                <span class="lbl-content">XÃ * </span>
+                            </label>
+                            <span>Ví dụ: Tứ Dân</span>
+                        </div>
+                        <div class="input-wrapper input-district-wrapper">
+                            <input class="form-control inp-frm1" type="text" id="district" required>
+                            <label class="lbl-frm1" for="district">
+                                <span class="lbl-content">HUYỆN * </span>
+                            </label>
+                            <span>Ví dụ: Khoái Châu</span>
+                        </div>
+                        <div class="input-wrapper input-province-wrapper">
+                            <input class="form-control inp-frm1" type="text" id="province" required>
+                            <label class="lbl-frm1" for="province">
+                                <span class="lbl-content">TỈNH * </span>
+                            </label>
+                            <span>Ví dụ: Hưng Yên</span>
+                        </div>
+                        <div class="national">Quốc gia: <span>Việt Nam</span></div>
+                        <div class="input-wrapper input-numberPhone-wrapper">
+                            <input class="form-control inp-frm1" type="text" id="numberPhone" required>
+                            <label class="lbl-frm1" for="numberPhone">
+                                <span class="lbl-content">SỐ ĐIỆN THOẠI * </span>
+                            </label>
+                            <span>Ví dụ: 0932834293</span>
+                        </div>
+                        <div class="input-wrapper input-email-wrapper">
+                            <input class="form-control inp-frm1" type="text" id="email" required>
+                            <label class="lbl-frm1" for="email">
+                                <span class="lbl-content">EMAIL * </span>
+                            </label>
+                            <span>Ví dụ: minhdra011100@gmail.com</span>
+                        </div>
+                        <div class="input-checkBox-wrapper">
+                          <div class="input-wrapper">
+                            <input class="" type="checkbox" name="" id="checkBox">
+                            <label for="checkBox">* Tôi trên 16 tuổi</label>
+                          </div>
+                            <span class="active">Phải xác nhận trên 16 tuổi</span>
+                        </div>
+                        <div class="submit-billDetail">
+                            <h2>CÁC TÙY CHỌN GIAO HÀNG</h2>
+                            <div class="deliver">
+                                <div class="name-deliver">
+                                    <h4>GIAO HÀNG TIÊU CHUẨN</h4>
+                                    <span>Trong vòng 3 - 5 ngày</span>
+                                </div>
+                                <div class="price-deliver">40.000 VND</div>
+                            </div>
+                        </div>
+                        <div class="btn-buy-wrapper">
+                            <button class="btn btn-light btn-border-dark btn-toPayment">XEM LẠI & THANH TOÁN</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bill-detail-right col-lg-6">
+                  <div class="bill-detail-login-wrapper">
+                    <h3>ĐĂNG NHẬP</h3>
+                    <span class="forgotPassword"><a href="#">Quên mật khẩu?</a></span>
+                    <form>
+                      <div class="input-wrapper input-username-wrapper">
+                        <input class="form-control inp-frm2" type="text" id="username" required>
+                        <label class="lbl-frm2 lbl-content" for="password">
+                          TÀI KHOẢN *
+                        </label>
+                      </div>
+                      <div class="input-wrapper input-password-wrapper">
+                        <input class="form-control inp-frm2" type="password" id="password" required>
+                        <label class="lbl-frm2 lbl-content" for="password">
+                          MẬT KHẨU *
+                        </label>
+                      </div>
+                      <div class="input-checkBox-wrapper">
+                        <div class="input-wrapper">
+                          <input class="" type="checkbox" name="" id="checkRemember">
+                          <label for="checkRemember">Ghi nhớ</label>
+                        </div>
+                      </div>
+                      <div class="btn-buy-wrapper">
+                        <button class="btn btn-light btn-border-dark w-100">ĐĂNG NHẬP</button>
+                      </div>
+                      <div class="btn-buy-wrapper">
+                        <span>Bạn cũng có thể đăng nhập bằng</span>
+                        <button class="btn btn-light btn-border-dark w-100 btn-fb">
+                          <i class="fab fa-facebook-square"></i>
+                          FACEBOOK
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="summaryOfOrder">
+                    <h3>TÓM TẮT ĐƠN HÀNG</h3>
+                    <div class="summary-content" style="background-color: transparent;">
+                      <div class="summary-item"><span class="amount-cart">0</span> SẢN PHẨM</div>
+                      <div class="summary-item summary-item-flex">
+                        <div class="summary-item-left">Tổng sản phẩm</div>
+                        <div class="summary-item-right total">0 VND</div>
+                      </div>
+                      <div class="summary-item summary-item-flex">
+                        <div class="summary-item-left">Giao hàng</div>
+                        <div class="summary-item-right">MIỄN PHÍ</div>
+                      </div>
+                      
+                      <div class="summary-item summary-item-flex">
+                        <div class="summary-item-left">Tổng</div>
+                        <div class="summary-item-right total total-real">0 VND</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkOut-content">
+              <div class="payment-wrapper">
+                <h1>PHƯƠNG THỨC THANH TOÁN</h1>
+                <span class=""><i class="fad fa-lock-alt"></i> Mọi phương thức thanh toán đều bảo mật và an toàn</span>
+                <form>
+                  <div class="input-radio-wrapper">
+                    <div class="input-radio-visa">
+                      <input type="radio" name="payment" id="visa" >
+                      <label for="visa">THẺ TÍN DỤNG </label>
+                    </div>
+                    <img src="../images/visa.png" alt="">
+                  </div>
+                  <div class="input-radio-wrapper">
+                    <div class="input-radio-payAfterReceive">
+                      <input type="radio" name="payment" id="payAfterReceive" checked>
+                      <label for="payAfterReceive">THANH TOÁN KHI NHẬN HÀNG <span>Thanh toán đơn hàng bằng tiền mặt khi nhận hàng tại địa chỉ đã chọn.</span></label>
+                    </div>
+                    <img src="../images/payAfterReceive.png" alt="">
+                  </div>
+                  <span>Vui lòng chọn "Đặt hàng ngay" dưới đây để hoàn thành đơn hàng.</span>
+                  <div class="input-checkBox-wrapper">
+                    <div class="input-wrapper">
+                      <input class="" type="checkbox" name="" id="readedRules">
+                      <label for="readedRules">Tôi đã đọc, hiểu và chấp thuận <a href="">Chính sách Bảo mật</a> và <a href="">Các Điều khoản và điều kiện</a>.</label>
+                    </div>
+                    <div class="input-wrapper" style="align-items: flex-start;">
+                      <input class="" type="checkbox" name="" id="agreed">
+                      <label for="agreed">Tôi theo đây đồng ý việc chia sẻ và tiết lộ thông tin cá nhân của tôi cho bên thứ ba được quy định tại <a href="">Chính sách bảo mật</a></label>
+                    </div>
+                  </div>
+                  <div class="btn-buy-wrapper">
+                    <button class="btn btn-light btn-border-dark">ĐẶT HÀNG NGAY</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="wrap-footer">
+        <div class="footer-header">
+          <div class="footer-brand">
+            DRA-SHOP
+          </div>
+          <div class="wrap-signUp">
+            <input
+            id="signUp"
+            class="inp inp-text"
+            type="text"
+            placeholder="Đăng ký để nhận tin tức ngay"
+            />
+            <span class="bar-signUp"></span>
+            <button class="btn btn-light btn-border-dark">Đăng ký</button>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="footer-bottom">
+          <ul>
+            <li class="footer-bottom-item flag" style="display: flex;">
+              <img src="../images/flag-vn.png" alt="">
+              Việt Nam
+            </li>
+            <li class="footer-bottom-item">Liên lạc</li>
+            <li class="footer-bottom-item">Ứng dụng</li>
+            <li class="footer-bottom-item">Theo dõi chúng tôi</li>
+            <li class="footer-bottom-item">Địa chỉ</li>
+            <li class="footer-bottom-item">Tuyển dụng</li>
+            <li class="footer-bottom-item">Điều khoản</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/CheckOut.js"></script>
+  </body>
+</html>

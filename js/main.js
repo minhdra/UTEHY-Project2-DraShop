@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    // Menu toggle
+    $(".btn-menu-toggle").click(function() {
+        if ($(".hb-menu-wrapper").hasClass("show-menu-toggle")) {
+            $(".hb-menu-wrapper, .nav-menu").removeClass("show-menu-toggle");
+        }
+        else {
+            $(".hb-menu-wrapper, .nav-menu").addClass("show-menu-toggle");
+        }
+    })
+
     // 
     $('.ds-logo-wrapper').click(function() {
         window.open('./index.html', '_parent');
@@ -101,8 +111,8 @@ $(document).ready(function () {
     // Search form
     $('#search').focus(function() {
         $('header').siblings('.hidden, footer').css('display', 'none');
-        $(this).parent().siblings('.search-suggest').css('display', 'flex');
-        $(this).parent().siblings('.search-suggest').slideDown();
+        $(this).parent().parent().siblings('.search-suggest').css('display', 'flex');
+        $(this).parent().parent().siblings('.search-suggest').slideDown();
         
     })
     

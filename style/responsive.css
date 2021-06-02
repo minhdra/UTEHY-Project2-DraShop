@@ -30,11 +30,11 @@
         max-height: 30rem;
     }
 
-    .header-bottom {
+    /* .header-bottom {
         justify-content: space-between;
-    }
+    } */
 
-    .hb-menu {
+    .hb-menu-wrapper {
         display: none;
     }
 
@@ -77,11 +77,11 @@
     .col-sm-11 {width: 91.66%;}
     .col-sm-12 {width: 100%;}
 
-    .header-bottom {
+    /* .header-bottom {
         justify-content: space-between;
-    }
+    } */
 
-    .hb-menu {
+    .hb-menu-wrapper {
         display: none;
     }
 
@@ -128,6 +128,10 @@
     .form-signUp {
         width: 60%;
     }
+
+    .hb-menu-wrapper {
+        display: none;
+    }
 }
 
  /* Large devices (desktops, 992px and up) */
@@ -144,6 +148,19 @@
     .col-lg-10 {width: 83.33%;}
     .col-lg-11 {width: 91.66%;}
     .col-lg-12 {width: 100%;}
+
+    .header-bottom {
+        justify-content: flex-start;
+        height: 4.5rem;
+    }
+
+    .hb-menu-wrapper {
+        width: auto;
+    }
+
+    .btn-menu-toggle {
+        display: none;
+    }
 }
 
 

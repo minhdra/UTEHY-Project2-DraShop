@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 :root{
     --primary-light-color: #f1f1f1;
     --primary-text-color: #222;
@@ -15,10 +17,11 @@ body,
 html {
   color: var(--primary-text-color);
   background-color: var(--primary-light-color);
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   line-height: 2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 a {
@@ -158,7 +161,7 @@ header.sticky{
   top: 0.25rem;
   justify-content: center;
   align-items: center;
-  font-size: 0.25rem;
+  font-size: 0.85rem;
   background-color: var(--primary-text-color);
   color: var(--primary-light-color);
   border-radius: 50%;
@@ -365,7 +368,7 @@ header.sticky{
   flex: 1 0 auto;
   height: 100%;
   width: 100%;
-  z-index: 999;
+  z-index: 500;
 }
 
 .header-bottom ul {
@@ -384,7 +387,7 @@ header.sticky{
   cursor: pointer;
   transition: 0.3s;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hb-menu ul li::before {
@@ -1011,6 +1014,10 @@ header.sticky{
   transition: .4s;
 }
 
+.content-wrapper h5 {
+  line-height: 1.4 !important;
+}
+
 .content-wrapper img{
   transition: .4s ease-in-out;
   
@@ -1573,7 +1580,6 @@ footer{
 .detail-tiny-bar {
   width: 100%;
   position: absolute;
-  font-size: 1.15rem;
   display: flex;
   background-color: var(--primary-light-color);
   justify-content: center;
@@ -1588,6 +1594,10 @@ footer{
   margin: 0 1rem;
   border: none;
   outline: none;
+  font-size: 1.15rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .detail-tiny-bar button:hover {
@@ -2126,6 +2136,10 @@ footer{
 .form-login-input input[type='checkbox'] {
   width: 1rem;
   height: 1rem;
+}
+
+.btn-login-wrapper .btn {
+  border-radius: .25rem;
 }
 
 /* About Shop */

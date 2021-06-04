@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    // Add logo
+    $("head").append(`
+    <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
+    `);
+
     // Menu toggle
     $(".btn-menu-toggle").click(function() {
         if ($(".hb-menu-wrapper").hasClass("show-menu-toggle")) {

@@ -149,6 +149,32 @@ $(document).ready(function () {
             scrollTop: $(el).offset().top - 100
         })
     })
+
+    // Add active to detail tiny bar
+    const activeBar = () => {
+        let currentNavId = $(".link-tiny-bar:first").attr('id');
+        
+        $('.link-tiny-bar').each(function () {
+            const navTop = $(this).offset().top;
+            if (pageYOffset >= navTop - 110) {
+                currentNavId = $(this).attr('id');
+            }
+        })
+
+        $(".detail-tiny-bar button").each(function () {
+            if (!currentNavId) $('.detail-tiny-bar button[name="collection"]').addClass('active');
+            if (currentNavId === $(this).attr('name')) {
+                $(this).addClass('active');
+            }
+            else $(this).removeClass('active');
+        });
+    }
+    activeBar();
+
+    // Scroll to active detail bar
+    $(window).on('scroll', function () {
+        activeBar();
+    })
         
     // Add cart
     var arrProduct = [];

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - DraShop</title>
     <!-- Font Roboto -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
     <!-- FontAwesome -->
     <link rel="stylesheet" href="../Fontawesome-5.15.3/css/all.min.css" />
     <!-- stylesheet -->
@@ -18,6 +17,7 @@
     <!-- JQuery -->
     <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body id="indexAdmin">
     <header>
         <nav>
@@ -27,10 +27,10 @@
             </div>
             <div class="nav-right">
                 <div class="user-wrapper">
-                    <div class="name-user">Le Minh   <i class="fas fa-caret-right"></i></div>
+                    <div class="name-user">Le Minh <i class="fas fa-caret-right"></i></div>
                     <div class="user-dropdown">
                         <div>Thông tin</div>
-                        <div>Đăng xuất</div>
+                        <div class="user-logOut">Đăng xuất</div>
                     </div>
                 </div>
                 <div class="avatar-wrapper">
@@ -44,9 +44,9 @@
             <div class="content-left col-exm-12 col-sm-12 col-md-3 col-lg-3">
                 <div class="content-item-wrapper">
                     <div class="content-item home">
-                        Trang chủ 
+                        Bảng điều khiển
                     </div>
-                    
+
                 </div>
                 <div class="content-item-wrapper">
                     <div class="content-item">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="content-item-wrapper">
                     <div class="content-item">
-                        Danh mục giao diện 
+                        Danh mục giao diện
                         <i class="fas fa-caret-right"></i>
                     </div>
                     <div class="content-item-dropdown">
@@ -113,14 +113,14 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
                         <div class="box">
                             <div class="title manageSpecies">
-                                Quản lý loại sản phẩm
+                                Quản lý loại SP
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
                         <div class="box">
                             <div class="title manageSupplier">
-                                Quản lý nhà cung cấp
+                                Quản lý NCC
                             </div>
                         </div>
                     </div>
@@ -134,14 +134,14 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
                         <div class="box">
                             <div class="title manageOrder">
-                                Quản lý hóa đơn xuất
+                                Quản lý HĐ xuất
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-exm-12">
                         <div class="box">
                             <div class="title manageImportBill">
-                                Quản lý hóa đơn nhập
+                                Quản lý HĐ nhập
                             </div>
                         </div>
                     </div>
@@ -161,24 +161,25 @@
                     </div>
                 </div>
                 <div id="manageProduct" class="right-content-item">
-                     <div class="manage-navbar">
-                         <div class="manage-navbar-left">
-                             <input type="text" class="form-control filter-table" placeholder="Tìm kiếm gì đó...">
-                             <select class="custom-select" name="" id="">
-                                 <option selected>Số lượng hiển thị</option>
-                                 <option value="5">5</option>
-                                 <option value="10">10</option>
-                                 <option value="15">15</option>
-                             </select>
-                             <select class="custom-select" name="" id="">
-                                 <option selected>Sắp xếp theo...</option>
-                                 <option value="A">A-Z</option>
-                                 <option value="Z">Z-A</option>
-                             </select>
-                         </div>
-                        <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="product">Thêm mới</button>
-                     </div>
-                     <div class="manageContent">
+                    <div class="manage-navbar">
+                        <div class="manage-navbar-left">
+                            <input type="text" class="form-control filter-table" placeholder="Tìm kiếm gì đó...">
+                            <select class="custom-select" name="" id="">
+                                <option selected>Số lượng hiển thị</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                            <select class="custom-select" name="" id="">
+                                <option selected>Sắp xếp theo...</option>
+                                <option value="A">A-Z</option>
+                                <option value="Z">Z-A</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="product">Thêm
+                            mới</button>
+                    </div>
+                    <div class="manageContent">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -195,7 +196,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <!-- <tr>
                                     <td class="numberOrder">1</td>
                                     <td>SP043945</td>
                                     <td>ÁO HOODIE 3 SỌC WORDING</td>
@@ -215,10 +216,10 @@
                                             <button class="btn btn-light btn-remove-product" data-manageName="product"><i class="fal fa-trash"></i></button>
                                         </div>
                                     </td>
-                                </tr>    
+                                </tr>     -->
                             </tbody>
                         </table>
-                     </div>
+                    </div>
                 </div>
                 <div id="manageSpecies" class="right-content-item">
                     <div class="manage-navbar">
@@ -236,43 +237,48 @@
                                 <option value="Z">Z-A</option>
                             </select>
                         </div>
-                       <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="species">Thêm mới</button>
+                        <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="species">Thêm
+                            mới</button>
                     </div>
                     <div class="manageContent">
-                       <table class="table">
-                           <thead>
-                               <tr>
-                                   <th>STT</th>
-                                   <th>Mã loại</th>
-                                   <th>Tên loại</th>
-                                   <th>Tác vụ</th>
-                               </tr>
-                           </thead>
-                           <tbody>
-                               <tr>
-                                   <td class="numberOrder">1</td>
-                                   <td>LSP04945</td>
-                                   <td>Áo</td>
-                                   <td>
-                                       <div class="wrap-edit-button">
-                                           <button class="btn btn-light btn-edit-species" data-manageName="species"><i class="fal fa-edit"></i></button>
-                                           <button class="btn btn-light btn-remove-species" data-manageName="species"><i class="fal fa-trash"></i></button>
-                                       </div>
-                                   </td>
-                               </tr>    
-                               <tr>
-                                   <td class="numberOrder">2</td>
-                                   <td>LSP84573</td>
-                                   <td>Quần</td>
-                                   <td>
-                                       <div class="wrap-edit-button">
-                                           <button class="btn btn-light btn-edit-species" data-manageName="species"><i class="fal fa-edit"></i></button>
-                                           <button class="btn btn-light btn-remove-species" data-manageName="species"><i class="fal fa-trash"></i></button>
-                                       </div>
-                                   </td>
-                               </tr>    
-                           </tbody>
-                       </table>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã loại</th>
+                                    <th>Tên loại</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="numberOrder">1</td>
+                                    <td>LSP04945</td>
+                                    <td>Áo</td>
+                                    <td>
+                                        <div class="wrap-edit-button">
+                                            <button class="btn btn-light btn-edit-species" data-manageName="species"><i
+                                                    class="fal fa-edit"></i></button>
+                                            <button class="btn btn-light btn-remove-species"
+                                                data-manageName="species"><i class="fal fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="numberOrder">2</td>
+                                    <td>LSP84573</td>
+                                    <td>Quần</td>
+                                    <td>
+                                        <div class="wrap-edit-button">
+                                            <button class="btn btn-light btn-edit-species" data-manageName="species"><i
+                                                    class="fal fa-edit"></i></button>
+                                            <button class="btn btn-light btn-remove-species"
+                                                data-manageName="species"><i class="fal fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div id="manageSupplier" class="right-content-item">
@@ -291,34 +297,37 @@
                                 <option value="Z">Z-A</option>
                             </select>
                         </div>
-                       <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="supplier">Thêm mới</button>
+                        <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="supplier">Thêm
+                            mới</button>
                     </div>
                     <div class="manageContent">
-                       <table class="table">
-                           <thead>
-                               <tr>
-                                   <th>STT</th>
-                                   <th>Mã nhà cung cấp</th>
-                                   <th>Tên nhà cung cấp</th>
-                                   <th>Địa chỉ</th>
-                                   <th>Tác vụ</th>
-                               </tr>
-                           </thead>
-                           <tbody>
-                               <tr>
-                                   <td class="numberOrder">1</td>
-                                   <td>NCC03445</td>
-                                   <td>Công Ty TNHH May Mặc Dony</td>
-                                   <td>142/4 Bàu Cát 2, P.12, Q. Tân Bình Tp. Hồ Chí Minh (TPHCM), Việt Nam</td>
-                                   <td>
-                                       <div class="wrap-edit-button">
-                                           <button class="btn btn-light btn-edit-supplier" data-manageName="supplier"><i class="fal fa-edit"></i></button>
-                                           <button class="btn btn-light btn-remove-supplier" data-manageName="supplier"><i class="fal fa-trash"></i></button>
-                                       </div>
-                                   </td>
-                               </tr> 
-                           </tbody>
-                       </table>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã nhà cung cấp</th>
+                                    <th>Tên nhà cung cấp</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="numberOrder">1</td>
+                                    <td>NCC03445</td>
+                                    <td>Công Ty TNHH May Mặc Dony</td>
+                                    <td>142/4 Bàu Cát 2, P.12, Q. Tân Bình Tp. Hồ Chí Minh (TPHCM), Việt Nam</td>
+                                    <td>
+                                        <div class="wrap-edit-button">
+                                            <button class="btn btn-light btn-edit-supplier"
+                                                data-manageName="supplier"><i class="fal fa-edit"></i></button>
+                                            <button class="btn btn-light btn-remove-supplier"
+                                                data-manageName="supplier"><i class="fal fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div id="manageNews" class="right-content-item">
@@ -337,34 +346,37 @@
                                 <option value="Z">Z-A</option>
                             </select>
                         </div>
-                       <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="news">Thêm mới</button>
+                        <button class="btn btn-light btn-border-dark btn-addNew" data-manageName="news">Thêm
+                            mới</button>
                     </div>
                     <div class="manageContent">
-                       <table class="table">
-                           <thead>
-                               <tr>
-                                   <th>STT</th>
-                                   <th>Mã tin tức</th>
-                                   <th>Mã người đăng</th>
-                                   <th>Ngày đăng</th>
-                                   <th>Tác vụ</th>
-                               </tr>
-                           </thead>
-                           <tbody>
-                               <tr>
-                                   <td class="numberOrder">1</td>
-                                   <td>TT603445</td>
-                                   <td>NV949382</td>
-                                   <td>26/04/2021</td>
-                                   <td>
-                                       <div class="wrap-edit-button">
-                                           <button class="btn btn-light btn-edit-news" data-manageName="news"><i class="fal fa-edit"></i></button>
-                                           <button class="btn btn-light btn-remove-news" data-manageName="news"><i class="fal fa-trash"></i></button>
-                                       </div>
-                                   </td>
-                               </tr> 
-                           </tbody>
-                       </table>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã tin tức</th>
+                                    <th>Mã người đăng</th>
+                                    <th>Ngày đăng</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="numberOrder">1</td>
+                                    <td>TT603445</td>
+                                    <td>NV949382</td>
+                                    <td>26/04/2021</td>
+                                    <td>
+                                        <div class="wrap-edit-button">
+                                            <button class="btn btn-light btn-edit-news" data-manageName="news"><i
+                                                    class="fal fa-edit"></i></button>
+                                            <button class="btn btn-light btn-remove-news" data-manageName="news"><i
+                                                    class="fal fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="add-edit-product add-edit" id="add-edit-product" style="padding: 0 1rem 1rem;">
@@ -473,4 +485,5 @@
     <script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     <script src="../js/MainAdmin.js"></script>
 </body>
+
 </html>

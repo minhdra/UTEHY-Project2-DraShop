@@ -4,6 +4,8 @@ $(document).ready(function () {
     <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
     `);
 
+    $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
+
     // Menu toggle
     $(".btn-menu-toggle").click(function() {
         if ($(".hb-menu-wrapper").hasClass("show-menu-toggle")) {
@@ -21,22 +23,20 @@ $(document).ready(function () {
 
     // Scroll navbar
     if(!document.getElementById('productDetail')){
-        var lastScrollTop = 0;
-        window.addEventListener("scroll", function(){
-            var st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop){
-                $('header').removeClass('sticky');
-            } else {
-                if(scrollY != 0){
-                    $('header').addClass('sticky');
-                }
-                else{
-                    // upscroll code
-                    $('header').removeClass('sticky');
-                }
+        var prevScrollPos = window.pageYOffset;
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                $('header').css('top', '0');
             }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-        }, false);
+            else {
+                $('header').css('top', '-7rem');
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    }
+    else {
+        $('header').css('position', 'static');
     }
 
     // Form login
@@ -174,8 +174,8 @@ $(document).ready(function () {
             else{
                 $('.nav-item').removeClass('active');
                 $(this).addClass('active');
-                $('#nav-men').css('display', 'flex');
-                $('#nav-men').slideDown();
+                $('#nav-women').css('display', 'flex');
+                $('#nav-women').slideDown();
             }
         }
         else if($(this).hasClass('nav-news')) {

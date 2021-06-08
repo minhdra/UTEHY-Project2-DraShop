@@ -25,6 +25,12 @@ html {
   position: relative;
 }
 
+.input,
+select {
+  font-family: inherit;
+  font-weight: 500;
+}
+
 /* Login */
 #login {
   background-color: #2980b9;
@@ -141,7 +147,7 @@ nav {
 
 .user-wrapper {
   position: relative;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 .name-user {
@@ -154,15 +160,16 @@ nav {
 
 .user-wrapper .user-dropdown {
   position: absolute;
-  left: 1.5rem;
+  right: -2rem;
   top: 2.5rem;
+  color: var(--primary-text-color);
   /* display: flex; */
   display: none;
   flex-direction: column;
   background-color: var(--primary-light-color);
   z-index: 100;
   border-radius: 0.5rem;
-  width: 20vh;
+  width: 8rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -193,9 +200,12 @@ nav {
 }
 
 .nav-right {
-  padding-right: 3rem;
+  margin-right: 3rem;
   display: flex;
   align-items: center;
+  background: #00c787;
+    border-radius: 2rem;
+    color: #fff;
 }
 
 .ds-logo-wrapper {
@@ -208,6 +218,17 @@ nav {
 
 .ds-logo-wrapper img {
   width: 7.25rem;
+}
+
+.ds-logo-wrapper .toggle-menu-bar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+  background: #00c787;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
 }
 
 .main {
@@ -262,9 +283,9 @@ nav {
 
 .content-item:hover,
 .content-item.active {
-  background-color: var(--primary-text-color);
+  background-color: #009f6c;
   color: var(--primary-light-color);
-  border-color: var(--primary-text-color);
+  border-color: #009f6c;
 }
 
 .content-item-dropdown {
@@ -283,9 +304,9 @@ nav {
 
 .dropdown-item:hover,
 .dropdown-item.active {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #006646;
   color: var(--primary-light-color);
-  border-color: rgba(0, 0, 0, 0.6);
+  border-color: #006646;
 }
 
 .fa-caret-right {
@@ -379,7 +400,8 @@ nav {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
+  font-family: inherit;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -391,7 +413,7 @@ nav {
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   line-height: 1.25;
-  /* border-radius: .25rem; */
+  border-radius: .25rem;
   transition: all 0.15s ease-in-out;
   cursor: pointer;
 }

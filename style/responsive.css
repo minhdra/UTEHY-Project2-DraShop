@@ -26,6 +26,14 @@
         width: 100%;
     }
 
+    .cart-wrapper {
+        width: 60vh;
+    }
+
+    .tiny-cart-product-content {
+        width: 50%;
+    }
+
     .content-wrapper picture {
         max-height: 30rem;
     }

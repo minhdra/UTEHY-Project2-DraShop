@@ -1310,6 +1310,7 @@ footer {
 
 .title-cart .count-product {
   flex: 1 0 auto;
+  padding: 0 1rem;
 }
 
 .title-cart a {
@@ -1335,8 +1336,17 @@ footer {
   flex-wrap: wrap;
 }
 
+.cart-item-content {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
 .cart-item-wrapper picture {
-  width: 10rem;
+  /* width: 10rem; */
+  max-width: 10rem;
   max-height: 50vh;
   margin-right: 1rem;
 }
@@ -1347,8 +1357,17 @@ footer {
   object-fit: cover;
 }
 
+.name-product-cart {
+  font-size: 1.25rem;
+  overflow-wrap: anywhere;
+}
+
+.description-cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .description-cart-item {
-  margin-right: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1370,7 +1389,7 @@ footer {
 }
 
 .cart-item-price span {
-  padding-right: 0.75rem;
+  padding-right: 0.5rem;
   font-weight: 400;
 }
 

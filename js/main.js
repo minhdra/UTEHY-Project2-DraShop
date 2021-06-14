@@ -4,6 +4,9 @@ $(document).ready(function () {
     <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
     `);
 
+  // Go wishlist
+  $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
+
   $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
 
   // Menu toggle
@@ -289,4 +292,8 @@ $(document).ready(function () {
     sessionStorage.setItem("keyBrand", "");
     window.open("./resultSearch.html", "_parent");
   });
+
+  $(".ds-wishlist-with-count").text(
+    JSON.parse(sessionStorage.getItem('countWishlist')) ? JSON.parse(sessionStorage.getItem('countWishlist')) : 0
+  );
 });

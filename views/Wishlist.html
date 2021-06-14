@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chào mừng đến Dra-Shop</title>
+
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../Fontawesome-5.15.3/css/all.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/responsive.css">
+    <!-- JQuery -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="header-top">
+            <div class="ht-right">
+                <div class="ht-help">
+                    <i class="fal fa-question-circle"></i>
+                    Giúp đỡ
+                </div>
+                <div class="ht-numberPhone">
+                    <i class="fal fa-mobile"></i>
+                    +849234728323
+                </div>
+                <div class="dark-mode">
+                    <i class="fad fa-sun darkMode active"></i>
+                    <i class="fad fa-moon darkMode"></i>
+                </div>
+            </div>
+            <div class="ht-left">
+                <a class="ht-item" href="#" title="Store">
+                    <i class="fal fa-map-marker-alt"></i>
+                </a>
+                <a class="ht-item" href="#" title="Wishlist">
+                    <i class="fal fa-heart"></i>
+                    <span class="ds-wishlist-with-count">0</span>
+                </a>
+                <div class="user-wrapper">
+                    <a class="ht-item" href="#" title="Account">
+                        <i class="fal fa-user"></i>
+                    </a>
+                    <div class="user-dropdown">
+                        <div class="user-signin">
+                            Đăng nhập
+                        </div>
+                        <hr>
+                        <div class="user-signup">
+                            Đăng ký
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-home-wrapper">
+                    <a class="ht-item wrap-cart" href="#" title="Carts" onclick="window.open('./Cart.html', '_parent')">
+                        <i class="fal fa-shopping-bag"></i>
+                        <span class="ds-bag-with-count">0</span>
+                    </a>
+                    <div class="cart-wrapper">
+                        <h1 style="text-transform: uppercase; padding: 1rem;">Giỏ hàng của bạn</h1>
+                        <div class="text-no-product">
+                            Chưa có sản phẩm
+                        </div>
+                        <div class="tiny-cart-product-wrapper w-100">
+
+                        </div>
+                        <a class="w-100 link-cart" href="./Cart.html">GIỎ HÀNG</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header-bottom">
+            <div class="ds-logo-wrapper">
+                <img src="" alt="Logo" />
+            </div>
+            <button class="btn btn-menu-toggle">
+                <i class="far fa-bars"></i>
+            </button>
+            <div class="hb-menu-wrapper" id="toggleMenu">
+                <div class="hb-menu">
+                    <ul class="nav-menu">
+                        <li class="nav-item nav-new">Mới</li>
+                        <li class="nav-item nav-men">Nam</li>
+                        <li class="nav-item nav-women">Nữ</li>
+                        <li class="nav-item nav-about">Dra Shop</li>
+                        <li class="nav-item nav-news">Tạp Chí</li>
+                    </ul>
+                </div>
+                <div class="wrap-search">
+                    <label class="lbl-search" for="">
+                        <i class="far fa-search"></i>
+                    </label>
+                    <input id="search" class="inp inp-text" type="text" placeholder="Tìm kiếm sản phẩm..." />
+                    <span class="bar-search"></span>
+                </div>
+            </div>
+            <div class="search-suggest" style="height: auto; width: 100%">
+                <div class="group-suggest-left">
+                    <div class="group-suggest">
+                        <h3>NỮ</h3>
+                        <ul class="suggest-list">
+                            <li class="suggest-item">Váy, đầm</li>
+                            <li class="suggest-item">Túi xách</li>
+                            <li class="suggest-item">Trang sức</li>
+                            <li class="suggest-item">Giày</li>
+                        </ul>
+                    </div>
+                    <div class="group-suggest">
+                        <h3>NAM</h3>
+                        <ul class="suggest-list">
+                            <li class="suggest-item">Quần, áo</li>
+                            <li class="suggest-item">Đồng hồ</li>
+                            <li class="suggest-item">Túi</li>
+                            <li class="suggest-item">Giày</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-suggest-right">
+                    <h3>SẢN PHẨM</h3>
+                    <div class="product-list-suggest">
+                        <div class="product-item-suggest" style="display: flex;">
+                            <div class="wrap-img-suggest">
+                                <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+                            </div>
+                            <div class="name-product-suggest">
+                                Chân váy
+                            </div>
+                        </div>
+                        <div class="product-item-suggest" style="display: flex;">
+                            <div class="wrap-img-suggest">
+                                <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp"
+                                    at="">
+
+                            </div>
+                            <div class="name-product-suggest">
+                                Balo Trio
+                            </div>
+                        </div>
+                        <div class="product-item-suggest" style="display: flex;">
+                            <div class="wrap-img-suggest">
+                                <img src="../images/supreme/Áo_cans.png" alt="">
+                            </div>
+                            <div class="name-product-suggest">
+                                Áo Cans
+                            </div>
+                        </div>
+                        <div class="product-item-suggest" style="display: flex;">
+                            <div class="wrap-img-suggest">
+                                <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+                            </div>
+                            <div class="name-product-suggest">
+                                Quần bó Techfit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="suggest-exit">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div id="nav-new" class="nav-suggest" style="height: auto; width: 100%;">
+                <div class="group-suggest-left">
+                    <div class="group-suggest">
+                        <ul class="suggest-list">
+                            <li class="suggest-item">Thời trang nữ</li>
+                            <li class="suggest-item">Thời trang nam</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-suggest-right">
+                    <div class="group-suggest">
+                        <ul class="suggest-list">
+                            <li class="suggest-item">Bộ Sưu Tập 2021</li>
+                            <li class="suggest-item">Bộ Sưu Tập Mùa Hè</li>
+                            <li class="suggest-item">Bộ Sưu Tập Xuân-Hè</li>
+                            <li class="suggest-item">Bộ Sưu Tập Adidas</li>
+                        </ul>
+                    </div>
+                    <div class="product-list-suggest">
+                        <div class="product-item-suggest active">
+                            <img src="../images/banner-new.jpg" alt="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp" at="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/supreme/Áo_cans.png" alt="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="suggest-exit">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div id="nav-men" class="nav-suggest" style="height: auto; width: 100%;">
+                <div class="group-suggest-left">
+                    <div class="group-suggest">
+                        <ul class="suggest-list">
+                            <li class="suggest-item" data-suggest="shirt">Áo <i class="fas fa-caret-right"></i></li>
+                            <li class="suggest-item" data-suggest="pant">Quần <i class="fas fa-caret-right"></i></li>
+                            <li class="suggest-item" data-suggest="accessories">Phụ kiện <i
+                                    class="fas fa-caret-right"></i></li>
+                            <li class="suggest-item" data-suggest="travel">Du lịch</li>
+                            <li class="suggest-item" data-suggest="shoes">Giày</li>
+                            <li class="suggest-item" data-suggest="bag">Balo</li>
+                            <li class="suggest-item" data-suggest="ready">Ready-to-Wear</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-suggest-right">
+                    <div class="group-suggest">
+                        <ul class="suggest-list">
+                            <li class="suggest-item">Bộ Sưu Tập 2021</li>
+                        </ul>
+                    </div>
+                    <div class="product-list-suggest">
+                        <div class="product-item-suggest">
+                            <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+                        </div>
+                        <div class="product-item-suggest active">
+                            <img src="../images/banner-men.jpg" alt="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/supreme/Áo_cans.png" alt="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/adidas/Quan_Bo_Techfit.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="suggest-exit">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div id="nav-women" class="nav-suggest" style="height: auto; width: 100%;">
+                <div class="group-suggest-left">
+                    <div class="group-suggest">
+                        <ul class="suggest-list">
+                            <li class="suggest-item" data-suggest="shirt">Áo <i class="fas fa-caret-right"></i></li>
+                            <li class="suggest-item" data-suggest="pant">Quần <i class="fas fa-caret-right"></i></li>
+                            <li class="suggest-item" data-suggest="accessories">Phụ kiện <i
+                                    class="fas fa-caret-right"></i></li>
+                            <li class="suggest-item" data-suggest="travel">Du lịch</li>
+                            <li class="suggest-item" data-suggest="shoes">Giày</li>
+                            <li class="suggest-item" data-suggest="perfume">Nước hoa</li>
+                            <li class="suggest-item" data-suggest="hand-bag">Túi xách</li>
+                            <li class="suggest-item" data-suggest="ready">Ready-to-Wear</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-suggest-right">
+                    <div class="group-suggest">
+                        <ul class="suggest-list">
+
+                        </ul>
+                    </div>
+                    <div class="product-list-suggest">
+                        <div class="product-item-suggest">
+                            <img src="../images/adidas/Chan_Vay_DJen.jpg" alt="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/lv/louis-vuitton-backpack-trio-monogram-eclipse-canvas-bags.webp" at="">
+                        </div>
+                        <div class="product-item-suggest">
+                            <img src="../images/supreme/Áo_cans.png" alt="">
+                        </div>
+                        <div class="product-item-suggest active">
+                            <img src="../images/banner.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="suggest-exit">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="hidden main">
+        <div class="toolbar-wrapper">
+            <h2>sản phẩm yêu thích</h2>
+            <div class="toolbar">
+                <select name="" id="sort" class="custom-select">
+                    <option selected>Sắp xếp theo...</option>
+                    <option value="a-z">A-Z</option>
+                    <option value="z-a">Z-A</option>
+                    <option value="lowToHigh">Giá thấp > cao</option>
+                    <option value="highToLow">Giá cao > thấp</option>
+                </select>
+            </div>
+        </div>
+        <div class="products-wrapper">
+            
+            
+        </div>
+    </div>
+    <footer>
+        <div class="wrap-footer">
+            <div class="footer-header">
+                <div class="footer-brand">
+                    DRA-SHOP
+                </div>
+                <div class="wrap-signUp">
+                    <input id="signUp" class="inp inp-text" type="text" placeholder="Đăng ký để nhận tin tức ngay" />
+                    <span class="bar-signUp"></span>
+                    <button class="btn btn-light btn-border-dark">Đăng ký</button>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="footer-bottom">
+                <ul>
+                    <li class="footer-bottom-item flag" style="display: flex;">
+                        <img src="../images/flag-vn.png" alt="">
+                        Việt Nam
+                    </li>
+                    <li class="footer-bottom-item">Liên lạc</li>
+                    <li class="footer-bottom-item">Ứng dụng</li>
+                    <li class="footer-bottom-item">Theo dõi chúng tôi</li>
+                    <li class="footer-bottom-item">Địa chỉ</li>
+                    <li class="footer-bottom-item">Tuyển dụng</li>
+                    <li class="footer-bottom-item">Điều khoản</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ------------Login---------------- -->
+    <div class="mood mood-signin">
+        <div class="mood-main">
+            <div class="form-login">
+                <picture>
+                    <img src="../images/avatar-login.png" alt="Avatar login">
+                </picture>
+                <div class="form-login-input form-login-username">
+                    <label for="login-username">Tài khoản hoặc email:</label>
+                    <input id="login-username" class="form-control" type="text" placeholder="Tài khoản...">
+                </div>
+                <div class="form-login-input form-login-password">
+                    <label for="login-password">Mật khẩu:</label>
+                    <input id="login-password" class="form-control" type="password" placeholder="Mật khẩu...">
+                </div>
+                <div class="form-login-input">
+                    <input type="checkbox" name="" id="remember-password">
+                    <label for="remember-password">Nhớ mật khẩu</label>
+                </div>
+                <div class="btn-login-wrapper">
+                    <button class="btn btn-success btn-login-confirm" style="margin-right: 1rem;">Đăng nhập</button>
+                    <button class="btn btn-danger btn-exit-form">Trở lại</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------Sign Up---------------- -->
+    <div class="mood mood-signUp">
+        <div class="mood-main">
+            <div class="form-signUp">
+                <h1 style="margin-bottom: 1rem;">ĐĂNG KÝ</h1>
+                <div class="form-signUp-input form-signUp-username">
+                    <label for="signUp-username">Tài khoản hoặc email:</label>
+                    <input id="signUp-username" class="form-control" type="text" placeholder="Tài khoản...">
+                </div>
+                <div class="form-signUp-input form-signUp-password">
+                    <label for="signUp-password">Mật khẩu:</label>
+                    <input id="signUp-password" class="form-control" type="password" placeholder="Mật khẩu...">
+                </div>
+                <div class="form-signUp-input form-signUp-password-confirm">
+                    <label for="signUp-password-confirm">Xác nhân mật khẩu:</label>
+                    <input id="signUp-password-confirm" class="form-control" type="password"
+                        placeholder="Xác nhận mật khẩu...">
+                </div>
+                <div class="btn-signUp-wrapper" style="margin-top: .5rem;">
+                    <button class="btn btn-success btn-signUp-confirm" style="margin-right: 1rem;">Đăng ký</button>
+                    <button class="btn btn-danger btn-exit-form">Trở lại</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/wishlist.js"></script>
+</body>
+
+</html>

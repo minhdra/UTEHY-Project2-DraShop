@@ -928,6 +928,7 @@ header {
   padding: 0 1rem;
   margin: 2rem auto;
   min-height: 80vh;
+  transition: .4s;
 }
 
 .popular {
@@ -1769,6 +1770,7 @@ h2 {
 }
 
 .toolbar-wrapper h2 {
+  text-transform: uppercase;
   padding: 0;
 }
 

@@ -135,21 +135,71 @@ reLoad = () => {
     );
   });
 
-  $(".heart-wishlist").click(function () {
-    if ($(this).hasClass("fal")) {
-      $(".ds-wishlist-with-count").text(
-        Number.parseInt($(".ds-wishlist-with-count").text()) + 1
+  var wishlist = JSON.parse(sessionStorage.getItem("wishlist"));
+  if (!wishlist) wishlist = [];
+
+  // Wishlist
+  if ($(".heart-wishlist").length > 0) {
+    $(".heart-wishlist").click(function () {
+      // fal is not active, fas is active
+      if ($(this).hasClass("fal")) {
+        let check = true;
+
+        wishlist.forEach((el) => {
+          if (
+            $(this).parents(".content-wrapper").find("h5").text() ===
+            $(el).find("h5").text()
+          ) {
+            check = false;
+
+            wishlist.splice(ind, 1);
+            $(".ds-wishlist-with-count").text(
+              Number.parseInt($(".ds-wishlist-with-count").text()) - 1
+            );
+            
+            return;
+          }
+        });
+
+        if (check) {
+          $(".ds-wishlist-with-count").text(
+            Number.parseInt($(".ds-wishlist-with-count").text()) + 1
+          );
+          $(this).removeClass("fal");
+          $(this).addClass("fas");
+
+          wishlist.push($(this).parents(".content-wrapper").prop("outerHTML"));
+
+          sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
+        }
+      } else {
+        $(".ds-wishlist-with-count").text(
+          Number.parseInt($(".ds-wishlist-with-count").text()) - 1
+        );
+        $(this).removeClass("fas");
+        $(this).addClass("fal");
+
+        wishlist.forEach((el, ind) => {
+          if (
+            $(el).find("h5").text() ===
+            $(this).parents(".content-wrapper").find("h5").text()
+          ) {
+            wishlist.splice(ind, 1);
+            return;
+          }
+        });
+
+        sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
+      }
+
+      sessionStorage.setItem(
+        "countWishlist",
+        $(".ds-wishlist-with-count").text()
       );
-      $(this).removeClass("fal");
-      $(this).addClass("fas");
-    } else {
-      $(".ds-wishlist-with-count").text(
-        Number.parseInt($(".ds-wishlist-with-count").text()) - 1
-      );
-      $(this).removeClass("fas");
-      $(this).addClass("fal");
-    }
-  });
+
+      getProducts();
+    });
+  }
 };
 
 reLoad();

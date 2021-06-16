@@ -5,7 +5,9 @@ $(document).ready(function () {
     `);
 
   // Go wishlist
-  $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
+  if ($("body").attr("id") === "index")
+    $(".ht-item[title='Wishlist']").attr("href", "./views/Wishlist.html");
+  else $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
 
   $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
 
@@ -94,7 +96,7 @@ $(document).ready(function () {
 
   //
   $(".ds-logo-wrapper").click(function () {
-    window.open("./index.html", "_parent");
+    window.open("../index.html", "_parent");
   });
 
   // Scroll navbar
@@ -256,9 +258,13 @@ $(document).ready(function () {
         $("#nav-women").slideDown();
       }
     } else if ($(this).hasClass("nav-news")) {
-      window.open("./Magazine.html", "_parent");
+      if ($("body").attr("id") === "index")
+        window.open("./views/Magazine.html", "_parent");
+      else window.open("./Magazine.html", "_parent");
     } else if ($(this).hasClass("nav-about")) {
-      window.open("./AboutShop.html", "_parent");
+      if ($("body").attr("id") === "index")
+        window.open("./views/AboutShop.html", "_parent");
+      else window.open("./AboutShop.html", "_parent");
     } else {
       $("header").siblings(".hidden, footer").css("display", "block");
     }
@@ -290,10 +296,15 @@ $(document).ready(function () {
   $(".lbl-search").click(function () {
     sessionStorage.setItem("keySearch", $(this).siblings().val());
     sessionStorage.setItem("keyBrand", "");
-    window.open("./resultSearch.html", "_parent");
+    if ($("body").attr("id") === "index")
+      window.open("./views/resultSearch.html", "_parent");
+    else window.open("./resultSearch.html", "_parent");
+    
   });
 
   $(".ds-wishlist-with-count").text(
-    JSON.parse(sessionStorage.getItem('countWishlist')) ? JSON.parse(sessionStorage.getItem('countWishlist')) : 0
+    JSON.parse(sessionStorage.getItem("countWishlist"))
+      ? JSON.parse(sessionStorage.getItem("countWishlist"))
+      : 0
   );
 });

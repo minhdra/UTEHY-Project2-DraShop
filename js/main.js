@@ -105,7 +105,10 @@ $(document).ready(function () {
 
   //
   $(".ds-logo-wrapper").click(function () {
-    window.open("../index.html", "_parent");
+    if ($("body").attr("id") === "index")
+      window.open("./index.html", "_parent");
+    else window.open("../index.html", "_parent");
+    
   });
 
   // Scroll navbar

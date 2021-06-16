@@ -63,7 +63,7 @@ $(document).ready(function () {
       var keyBrand = $(this).attr("name");
       sessionStorage.setItem("keySearch", JSON.stringify(""));
       sessionStorage.setItem("keyBrand", keyBrand);
-      window.open("./brand.html", "_parent");
+      window.open("./Brand.html", "_parent");
     }
   );
 
@@ -160,7 +160,7 @@ $(document).ready(function () {
     }
   });
 
-  var wishlist = JSON.parse(sessionStorage.getItem('wishlist'));
+  var wishlist = JSON.parse(sessionStorage.getItem("wishlist"));
   if (!wishlist) wishlist = [];
 
   // Wishlist
@@ -171,7 +171,10 @@ $(document).ready(function () {
         let check = true;
 
         wishlist.forEach((el, ind) => {
-          if ($(this).parents('.content-wrapper').find('h5').text() === $(el).find('h5').text()) {
+          if (
+            $(this).parents(".content-wrapper").find("h5").text() ===
+            $(el).find("h5").text()
+          ) {
             check = false;
 
             wishlist.splice(ind, 1);
@@ -181,7 +184,7 @@ $(document).ready(function () {
 
             return;
           }
-        })
+        });
 
         if (check) {
           $(".ds-wishlist-with-count").text(
@@ -189,7 +192,7 @@ $(document).ready(function () {
           );
           $(this).removeClass("fal");
           $(this).addClass("fas");
-  
+
           wishlist.push($(this).parents(".content-wrapper").prop("outerHTML"));
         }
         sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
@@ -301,9 +304,9 @@ $(document).ready(function () {
   }
 
   // Open brand.html
-  $(".popular-content-left h3, .popular-content-left button").click(
-    function () {
-      window.open("./Brand.html", "_parent");
-    }
-  );
+  // $(".popular-content-left h3, .popular-content-left button").click(
+  //   function () {
+  //     window.open("./Brand.html", "_parent");
+  //   }
+  // );
 });

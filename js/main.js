@@ -1,15 +1,24 @@
 $(document).ready(function () {
-  // Add logo
-  $("head").append(`
+  // add address
+  if ($("body").attr("id") === "index") {
+    // wishlist
+    $(".ht-item[title='Wishlist']").attr("href", "./views/Wishlist.html");
+    // Logo shop
+    $(".ds-logo-wrapper img").attr("src", "./images/DS-Logo-2.png");
+    // icon shop
+    $("head").append(`
+    <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon">
+    `);
+  } else {
+    // wishlist
+    $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
+    // Logo shop
+    $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
+    // icon shop
+    $("head").append(`
     <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
     `);
-
-  // Go wishlist
-  if ($("body").attr("id") === "index")
-    $(".ht-item[title='Wishlist']").attr("href", "./views/Wishlist.html");
-  else $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
-
-  $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
+  }
 
   // Menu toggle
   $(".btn-menu-toggle").click(function () {
@@ -299,7 +308,6 @@ $(document).ready(function () {
     if ($("body").attr("id") === "index")
       window.open("./views/resultSearch.html", "_parent");
     else window.open("./resultSearch.html", "_parent");
-    
   });
 
   $(".ds-wishlist-with-count").text(

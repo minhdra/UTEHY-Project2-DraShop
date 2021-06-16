@@ -1,24 +1,13 @@
 $(document).ready(function () {
-  // add address
-  if ($("body").attr("id") === "index") {
-    // wishlist
-    $(".ht-item[title='Wishlist']").attr("href", "./views/Wishlist.html");
-    // Logo shop
-    $(".ds-logo-wrapper img").attr("src", "./images/DS-Logo-2.png");
-    // icon shop
-    $("head").append(`
-    <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon">
-    `);
-  } else {
-    // wishlist
-    $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
-    // Logo shop
-    $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
-    // icon shop
-    $("head").append(`
+  // Add logo
+  $("head").append(`
     <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
     `);
-  }
+
+  // Go wishlist
+  $(".ht-item[title='Wishlist']").attr("href", "./Wishlist.html");
+
+  $(".ds-logo-wrapper img").attr("src", "../images/DS-Logo-2.png");
 
   // Menu toggle
   $(".btn-menu-toggle").click(function () {
@@ -105,10 +94,7 @@ $(document).ready(function () {
 
   //
   $(".ds-logo-wrapper").click(function () {
-    if ($("body").attr("id") === "index")
-      window.open("./index.html", "_parent");
-    else window.open("../index.html", "_parent");
-    
+    window.open("./index.html", "_parent");
   });
 
   // Scroll navbar
@@ -270,13 +256,9 @@ $(document).ready(function () {
         $("#nav-women").slideDown();
       }
     } else if ($(this).hasClass("nav-news")) {
-      if ($("body").attr("id") === "index")
-        window.open("./views/Magazine.html", "_parent");
-      else window.open("./Magazine.html", "_parent");
+      window.open("./Magazine.html", "_parent");
     } else if ($(this).hasClass("nav-about")) {
-      if ($("body").attr("id") === "index")
-        window.open("./views/AboutShop.html", "_parent");
-      else window.open("./AboutShop.html", "_parent");
+      window.open("./AboutShop.html", "_parent");
     } else {
       $("header").siblings(".hidden, footer").css("display", "block");
     }
@@ -308,14 +290,10 @@ $(document).ready(function () {
   $(".lbl-search").click(function () {
     sessionStorage.setItem("keySearch", $(this).siblings().val());
     sessionStorage.setItem("keyBrand", "");
-    if ($("body").attr("id") === "index")
-      window.open("./views/resultSearch.html", "_parent");
-    else window.open("./resultSearch.html", "_parent");
+    window.open("./resultSearch.html", "_parent");
   });
 
   $(".ds-wishlist-with-count").text(
-    JSON.parse(sessionStorage.getItem("countWishlist"))
-      ? JSON.parse(sessionStorage.getItem("countWishlist"))
-      : 0
+    JSON.parse(sessionStorage.getItem('countWishlist')) ? JSON.parse(sessionStorage.getItem('countWishlist')) : 0
   );
 });

@@ -63,7 +63,7 @@ $(document).ready(function () {
       var keyBrand = $(this).attr("name");
       sessionStorage.setItem("keySearch", JSON.stringify(""));
       sessionStorage.setItem("keyBrand", keyBrand);
-      window.open("./views/Brand.html", "_parent");
+      window.open("./brand.html", "_parent");
     }
   );
 
@@ -126,7 +126,7 @@ $(document).ready(function () {
     );
     sessionStorage.setItem("productRecent", JSON.stringify(productRecent));
 
-    window.open("./views/ProductDetail.html", "_parent");
+    window.open("./ProductDetail.html", "_parent");
   });
 
   // Carousel hot
@@ -303,7 +303,7 @@ $(document).ready(function () {
   // Open brand.html
   $(".popular-content-left h3, .popular-content-left button").click(
     function () {
-      window.open("./views/Brand.html", "_parent");
+      window.open("./Brand.html", "_parent");
     }
   );
 });

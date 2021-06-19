@@ -89,7 +89,7 @@ $(document).ready(function () {
         $(this).siblings().children(".name-user").css("text-decoration", "");
       }
     );
-
+    // Show dropdown avatar
     $(".avatar-wrapper, .name-user").click(function () {
       $(".user-dropdown").slideToggle();
       $(".user-dropdown").css("display", "flex");
@@ -99,7 +99,7 @@ $(document).ready(function () {
         $(".name-user .fa-caret-right").addClass("active");
       }
     });
-
+    // Active navigation with CSS
     $(".content-item").click(function () {
       $(this).siblings().slideToggle();
       // $('.content-item').removeClass('active');
@@ -112,7 +112,7 @@ $(document).ready(function () {
         $(this).addClass("active");
       }
     });
-
+    // Dropdown navigation
     $(".dropdown-item, .box .title").click(function () {
       $(".add-edit").slideUp();
       $(".dropdown-item").removeClass("active");
@@ -122,6 +122,7 @@ $(document).ready(function () {
         $(this).addClass("active");
       }
 
+      // Add animate slide
       if ($(this).hasClass("manageProduct")) {
         // $('#add-edit-product').slideUp();
         $(".right-content-item").slideUp();
@@ -150,6 +151,7 @@ $(document).ready(function () {
       species = {};
     var check;
 
+    // Thêm mới
     $(".btn-addNew").click(function () {
       if ($(this).attr("data-manageName") === "product") {
         var id = ID("HH", 6);
@@ -175,6 +177,8 @@ $(document).ready(function () {
         $(".add-edit-left .inp-name").val("");
         $(this).parents("#manageProduct").slideUp();
         $("#add-edit-product").slideDown();
+
+        setSpecies($("#add-edit-product"));
       } else if ($(this).attr("data-manageName") === "species") {
         var id = ID("LSP", 5);
 
@@ -301,7 +305,6 @@ $(document).ready(function () {
         }
       } else if (check == 2 || check == 2.2) {
         if ($(".add-edit-species .inp-name").val().trim() == "") {
-          console.log("a");
           $(".alert").fadeIn();
           setTimeout(function () {
             $(".alert").fadeOut();
@@ -312,6 +315,18 @@ $(document).ready(function () {
             species["name"] = $(".add-edit-species .inp-name").val();
 
             addSpecies();
+            updateSpecies();
+          } else {
+            species["id"] = $(".add-edit-species .inp-id").val();
+            species["name"] = capitalizeLetter(
+              $(".add-edit-species .inp-name").val()
+            );
+
+            $("#manageSpecies tbody tr").each(function () {
+              if ($(this).find("td:nth(1)").text() == species["id"]) {
+                $(this).find("td:nth(2)").text(species["name"]);
+              }
+            });
           }
           $("#manageSpecies").slideDown();
           numberOrder("#manageSpecies");
@@ -357,7 +372,7 @@ $(document).ready(function () {
                 <tr>
                     <td class="numberOrder">1</td>
                     <td>${species.id}</td>
-                    <td>${species.name}</td>
+                    <td>${capitalizeLetter(species.name)}</td>
                     <td>
                         <div class="wrap-edit-button">
                             <button class="btn btn-light btn-edit-species" data-manageName="species"><i class="fal fa-edit"></i></button>
@@ -371,6 +386,8 @@ $(document).ready(function () {
     // Update product
     editProduct = () => {
       $(".btn-edit-product").click(function () {
+        setSpecies($("#add-edit-product"));
+
         var brand = $(this)
           .parents("tr")
           .find("td:nth(3)")
@@ -438,6 +455,55 @@ $(document).ready(function () {
       });
     };
     editProduct();
+    // Update species
+    updateSpecies = () => {
+      $(".btn-edit-species").click(function () {
+        let id = $(this).parents("tr").find("td:nth(1)").text();
+        let name = $(this).parents("tr").find("td:nth(2)").text();
+
+        $("#manageSpecies").slideUp();
+        $("#add-edit-species").slideDown();
+
+        $(".add-edit-species h2").text("SỬA LOẠI SẢN PHẨM");
+        $(".add-edit-species .inp-id").val(id);
+        $(".add-edit-species .inp-name").val(name);
+        check = 2.2;
+
+        $(".btn-exit").click(function () {
+          $(this).parents("#add-edit-species").slideUp();
+          $(".right-content-item").css("display", "none");
+          $("#manageSpecies").slideDown();
+        });
+      });
+    };
+    updateSpecies();
+    // get Species
+    getSpecies = () => {
+      let arrSpecies = [];
+      $("#manageSpecies tbody tr").each(function () {
+        arrSpecies.push($(this).find("td:nth(2)").text());
+      });
+      return arrSpecies;
+    };
+    // set Species
+    setSpecies = (selector) => {
+      let arrSpecies = getSpecies();
+      arrSpecies.forEach((specie, index) => {
+        if (index === 0) {
+          selector.find("select#species").html(`
+          <option value="${specie.toLowerCase()}">${capitalizeLetter(
+            specie
+          )}</option>
+        `);
+        } else {
+          selector.find("select#species").append(`
+            <option value="${specie.toLowerCase()}">${capitalizeLetter(
+            specie
+          )}</option>
+          `);
+        }
+      });
+    };
     // Update session listProduct when edit
     // updateSession = (product = {}) => {
     //     const newProducts = JSON.parse(sessionStorage.getItem('listProductsFromAdmin')).map(pro => {

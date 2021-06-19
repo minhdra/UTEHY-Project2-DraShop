@@ -45,8 +45,8 @@ $(document).ready(function () {
   getProducts = () => {
     var products = [],
       products_new = [];
-    $(".carousel-wrapper .content-wrapper").each(function (ind, el) {
-      products.push($(el).prop("outerHTML"));
+    $(".carousel-gender .content-wrapper").each(function () {
+      products.push($(this).prop("outerHTML"));
     });
 
     $.each(products, function (ind, el) {
@@ -110,6 +110,9 @@ $(document).ready(function () {
   productRecent = productRecent ? productRecent : [];
 
   $(".btn-view, .content-wrapper h5").click(function () {
+    if ($(this).parents(".hot")) {
+      $(this).parents(".content-wrapper").removeAttr('style');
+    }
     var product = {
       link_img: $(this).parents(".content-wrapper").find("img").attr("src"),
       name_product: $(this).parents(".content-wrapper").find("h5").text(),
